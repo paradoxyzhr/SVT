@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hygiène du Système Musculaire</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --neon-purple: #a855f7;
@@ -21,11 +21,29 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   background: var(--dark-bg);
   color: #e2e8f0;
   overflow-x: hidden;
   cursor: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Orbitron specific refinements */
+.hero-title, .section-title, .score-num, .quiz-title {
+  letter-spacing: -0.01em;
+}
+.section-label, .badge, .rule-num, .drag-hint, nav a {
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 0.10em;
+}
+.stat-num {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.02em;
+}
+.hero-sub, .rule-desc, .maladie-card p, .muscle-detail-desc {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
 }
 @media (pointer: coarse) {
   body { cursor: auto; }
@@ -89,7 +107,7 @@ nav::-webkit-scrollbar { display: none; }
 nav a {
   color: rgba(255,255,255,0.55);
   text-decoration: none;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -155,7 +173,7 @@ body::before {
   margin-bottom: 28px;
 }
 .badge {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -168,7 +186,7 @@ body::before {
 .badge-blue { color: var(--neon-blue); border-color: rgba(6,182,212,0.4); background: rgba(6,182,212,0.1); }
 
 .hero-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: clamp(2.8rem, 6vw, 5rem);
   font-weight: 800;
   line-height: 1.05;
@@ -196,7 +214,7 @@ body::before {
   flex-wrap: wrap;
 }
 .btn-primary {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;
   font-size: 0.9rem;
   padding: 14px 32px;
@@ -215,7 +233,7 @@ body::before {
   box-shadow: 0 0 50px rgba(168,85,247,0.55);
 }
 .btn-outline {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;
   font-size: 0.9rem;
   padding: 13px 32px;
@@ -283,7 +301,7 @@ body::before {
   left: 16px;
   top: -4px;
   font-size: 0.68rem;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;
   color: var(--neon-pink);
   white-space: nowrap;
@@ -305,7 +323,7 @@ body::before {
   text-align: center;
 }
 .stat-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.8rem;
   font-weight: 800;
   background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
@@ -326,7 +344,7 @@ body::before {
   position: relative;
 }
 .section-label {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -335,7 +353,7 @@ body::before {
   margin-bottom: 16px;
 }
 .section-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 800;
   line-height: 1.1;
@@ -393,7 +411,7 @@ body::before {
 .icon-blue { background: rgba(6,182,212,0.15); box-shadow: 0 0 20px rgba(6,182,212,0.15); }
 
 .muscle-card h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -449,7 +467,7 @@ body::before {
   text-align: center;
 }
 .quote-text {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.6;
@@ -504,7 +522,7 @@ body::before {
   margin-bottom: 18px;
 }
 .rule-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 0.65rem;
   font-weight: 800;
   letter-spacing: 0.15em;
@@ -514,7 +532,7 @@ body::before {
   border-radius: 20px;
 }
 .rule-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
 }
@@ -611,7 +629,7 @@ body::before {
 }
 
 .maladie-name {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 8px;
@@ -642,7 +660,7 @@ body::before {
   padding: 48px;
 }
 .prevention-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.4rem;
   font-weight: 800;
   margin-bottom: 32px;
@@ -675,7 +693,7 @@ body::before {
   margin-top: 1px;
 }
 .prev-content h4 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   margin-bottom: 4px;
@@ -710,7 +728,7 @@ body::before {
   background: linear-gradient(135deg, rgba(168,85,247,0.2), rgba(236,72,153,0.2));
   border: 1px solid rgba(168,85,247,0.3);
   color: var(--neon-purple);
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -720,7 +738,7 @@ body::before {
   margin-bottom: 20px;
 }
 .quiz-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.8rem;
   font-weight: 800;
   margin-bottom: 10px;
@@ -741,7 +759,7 @@ body::before {
 .quiz-progress-label {
   font-size: 0.8rem;
   color: rgba(255,255,255,0.4);
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
 }
 .quiz-progress-bar {
   height: 4px;
@@ -758,7 +776,7 @@ body::before {
 }
 
 .quiz-question {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.5;
@@ -812,7 +830,7 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   flex-shrink: 0;
@@ -837,7 +855,7 @@ body::before {
   border: none;
   background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
   color: white;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   cursor: none;
@@ -885,7 +903,7 @@ body::before {
   justify-content: center;
 }
 .score-num {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   font-weight: 800;
   background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
@@ -895,7 +913,7 @@ body::before {
 }
 .score-total { font-size: 0.8rem; color: rgba(255,255,255,0.4); }
 .score-msg {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -911,7 +929,7 @@ footer {
   align-items: center;
 }
 .footer-brand {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 800;
   font-size: 1rem;
   background: linear-gradient(135deg, var(--neon-purple), var(--neon-pink));
@@ -969,7 +987,7 @@ footer {
   transform: translateY(-4px);
 }
 .chart-card-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 6px;
@@ -990,7 +1008,7 @@ canvas { display: block; }
   color: rgba(255,255,255,0.55);
   width: 130px;
   flex-shrink: 0;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 600;
 }
 .bar-track {
@@ -1007,7 +1025,7 @@ canvas { display: block; }
   transition: width 1.2s cubic-bezier(0.23,1,0.32,1);
 }
 .bar-val {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   width: 38px;
@@ -1028,7 +1046,7 @@ canvas { display: block; }
 .legend-item { display: flex; align-items: center; gap: 10px; }
 .legend-dot { width: 12px; height: 12px; border-radius: 4px; flex-shrink: 0; }
 .legend-text { font-size: 0.78rem; color: rgba(255,255,255,0.6); }
-.legend-val { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.82rem; }
+.legend-val { font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 0.82rem; }
 
 /* Radar */
 .radar-wrap { display: flex; justify-content: center; }
@@ -1060,7 +1078,7 @@ canvas { display: block; }
   gap: 4px;
 }
 .lang-switch button {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   padding: 7px 18px;
@@ -1117,7 +1135,7 @@ footer {
   gap: 12px;
 }
 .paradox-badge {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 800;
   font-size: 0.78rem;
   letter-spacing: 0.18em;
@@ -1166,9 +1184,10 @@ footer {
   height: 520px;
   border-radius: 28px;
   overflow: hidden;
-  background: #000818;
-  border: 1px solid rgba(0,150,220,0.2);
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, #001830, #00050f);
+  border: 1px solid rgba(0,200,255,0.18);
   cursor: grab;
+  box-shadow: 0 0 60px rgba(0,150,255,0.08), inset 0 0 40px rgba(0,0,20,0.5);
 }
 #three-canvas-wrap:active { cursor: grabbing; }
 #three-canvas-wrap canvas { display: block; width: 100% !important; height: 100% !important; }
@@ -1178,7 +1197,7 @@ footer {
   transform: translateX(-50%);
   font-size: 0.72rem;
   color: rgba(255,255,255,0.3);
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   letter-spacing: 0.1em;
   pointer-events: none;
   display: flex; align-items: center; gap: 6px;
@@ -1217,12 +1236,12 @@ footer {
   color: rgba(255,255,255,0.2);
 }
 .panel-placeholder .ph-icon { font-size: 3rem; margin-bottom: 16px; }
-.panel-placeholder p { font-size: 0.85rem; font-family: 'Syne', sans-serif; line-height: 1.6; }
+.panel-placeholder p { font-size: 0.85rem; font-family: 'Orbitron', sans-serif; line-height: 1.6; }
 .muscle-detail { display: none; animation: fadeInUp 0.4s ease; }
 .muscle-detail.show { display: block; }
 .muscle-tag {
   display: inline-block;
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -1232,7 +1251,7 @@ footer {
   margin-bottom: 18px;
 }
 .muscle-detail-name {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.8rem;
   font-weight: 800;
   line-height: 1.1;
@@ -1266,7 +1285,7 @@ footer {
   min-width: 80px;
 }
 .chip-val {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
   font-weight: 800;
   display: block;
@@ -1433,7 +1452,7 @@ footer {
   <div class="roles-wrap fade-in">
     <div>
       <div class="section-label">Fonctions essentielles</div>
-      <h3 style="font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:800;margin-bottom:24px;">Rôles des muscles</h3>
+      <h3 style="font-family:'Orbitron',sans-serif;font-size:1.4rem;font-weight:800;margin-bottom:24px;">Rôles des muscles</h3>
       <div class="roles-list">
         <div class="role-item"><span class="role-icon">🏃</span><span class="role-text">Mouvement et locomotion</span></div>
         <div class="role-item"><span class="role-icon">🧍</span><span class="role-text">Maintien de la posture</span></div>
@@ -1921,7 +1940,7 @@ function drawDonut() {
     ctx.beginPath(); ctx.arc(cx,cy,inner,0,Math.PI*2);
     ctx.fillStyle = '#050510'; ctx.fill();
     ctx.fillStyle = 'rgba(255,255,255,0.65)';
-    ctx.font = 'bold 12px Syne, sans-serif';
+    ctx.font = 'bold 12px Orbitron, sans-serif';
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
     ctx.fillText('Corps', cx, cy);
     if (animPct<1) requestAnimationFrame(animDonut);
@@ -1956,7 +1975,7 @@ function drawRadar() {
     ctx.fillStyle=grad; ctx.fill();
     ctx.strokeStyle='#a855f7'; ctx.lineWidth=2; ctx.shadowColor='#a855f7'; ctx.shadowBlur=12; ctx.stroke(); ctx.shadowBlur=0;
     pts.forEach(p=>{ctx.beginPath();ctx.arc(p[0],p[1],4,0,Math.PI*2);ctx.fillStyle='#ec4899';ctx.shadowColor='#ec4899';ctx.shadowBlur=10;ctx.fill();ctx.shadowBlur=0;});
-    ctx.font='11px Syne,sans-serif'; ctx.fillStyle='rgba(255,255,255,0.6)'; ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.font='11px Orbitron,sans-serif'; ctx.fillStyle='rgba(255,255,255,0.6)'; ctx.textAlign='center'; ctx.textBaseline='middle';
     labels.forEach((lbl,i)=>{const a=i*as-Math.PI/2,lx=cx+Math.cos(a)*(r+20),ly=cy+Math.sin(a)*(r+20);ctx.fillText(lbl,lx,ly);});
     if(animPct<1) requestAnimationFrame(animRadar);
   }
@@ -2112,150 +2131,319 @@ function setLang(lang) {
 
   var W = wrap.clientWidth || 400, H = wrap.clientHeight || 520;
   var scene = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera(38, W/H, 0.1, 100);
-  camera.position.set(0, 1.35, 5.6);
-  camera.lookAt(0, 1.15, 0);
+  var camera = new THREE.PerspectiveCamera(36, W/H, 0.1, 100);
+  camera.position.set(0, 1.4, 5.8);
+  camera.lookAt(0, 1.2, 0);
 
   var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(W, H);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.setClearColor(0x000818, 1);
+  renderer.setClearColor(0x00050f, 1);
   wrap.appendChild(renderer.domElement);
 
-  // Subtle lights
-  scene.add(new THREE.AmbientLight(0x001840, 1.0));
+  // ── ADVANCED LIGHTING ──
+  scene.add(new THREE.AmbientLight(0x001122, 0.8));
+  var lightCyan = new THREE.PointLight(0x00eeff, 3.5, 10);
+  lightCyan.position.set(-2.2, 2.5, 2.5);
+  scene.add(lightCyan);
+  var lightPurple = new THREE.PointLight(0xaa00ff, 2.8, 8);
+  lightPurple.position.set(2.2, 2.0, 2.0);
+  scene.add(lightPurple);
+  var lightPink = new THREE.PointLight(0xff0077, 1.8, 7);
+  lightPink.position.set(0, 3.5, -1.5);
+  scene.add(lightPink);
+  var lightGold = new THREE.PointLight(0xffaa00, 1.2, 5);
+  lightGold.position.set(0, -0.5, 3);
+  scene.add(lightGold);
 
   var group = new THREE.Group();
   scene.add(group);
 
-  // ── MATERIALS ──
-  var C_MAIN  = 0x00d4ff;
-  var C_EDGE  = 0x00aaee;
-  var C_GLOW  = 0xffffff;
+  // ── MATERIAL FACTORY ──
+  var C_CYAN   = 0x00d4ff;
+  var C_PURPLE = 0x9944ff;
+  var C_PINK   = 0xff2288;
+  var C_GOLD   = 0xffaa00;
+  var C_WHITE  = 0xffffff;
+  var C_GREEN  = 0x00ffaa;
 
-  function makeLine(opacity) {
+  function makeLine(col, opacity) {
     return new THREE.LineBasicMaterial({
-      color: C_MAIN, transparent: true, opacity: opacity,
+      color: col||C_CYAN, transparent: true, opacity: opacity||0.55,
       blending: THREE.AdditiveBlending, depthWrite: false
     });
   }
   function makeDot(size, opacity, col) {
     return new THREE.PointsMaterial({
-      color: col || C_MAIN, size: size, transparent: true, opacity: opacity,
+      color: col||C_CYAN, size: size, transparent: true, opacity: opacity,
       blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true
     });
   }
+  function makeSolid(col, opacity) {
+    return new THREE.MeshPhongMaterial({
+      color: col, emissive: col, emissiveIntensity: 0.25,
+      transparent: true, opacity: opacity||0.07,
+      blending: THREE.AdditiveBlending, depthWrite: false,
+      side: THREE.DoubleSide
+    });
+  }
 
-  // Add a body part: edges + vertex dots + glow dots
-  function addPart(geo, x, y, z, rx, ry, rz) {
+  // partials array for shimmer
+  var lineParts = [];
+
+  // Add a body part: solid mesh + edges + glow dots
+  function addPart(geo, x, y, z, rx, ry, rz, edgeCol, solidCol) {
     rx=rx||0; ry=ry||0; rz=rz||0;
-    var edges = new THREE.EdgesGeometry(geo);
+    edgeCol = edgeCol || C_CYAN;
 
-    var lines = new THREE.LineSegments(edges, makeLine(0.5));
+    // Solid semi-transparent body
+    if (solidCol !== false) {
+      var solid = new THREE.Mesh(geo, makeSolid(solidCol||edgeCol, 0.06));
+      solid.position.set(x,y,z); solid.rotation.set(rx,ry,rz);
+      group.add(solid);
+    }
+
+    // Edges wireframe
+    var edges = new THREE.EdgesGeometry(geo);
+    var lines = new THREE.LineSegments(edges, makeLine(edgeCol, 0.55));
     lines.position.set(x,y,z); lines.rotation.set(rx,ry,rz);
     group.add(lines);
+    lineParts.push(lines);
 
-    // Fine dots on all vertices
-    var dots = new THREE.Points(geo, makeDot(0.025, 0.85, C_MAIN));
+    // Fine vertex dots
+    var dots = new THREE.Points(geo, makeDot(0.022, 0.9, edgeCol));
     dots.position.set(x,y,z); dots.rotation.set(rx,ry,rz);
     group.add(dots);
 
-    // Bright glow at vertices
-    var glow = new THREE.Points(geo, makeDot(0.06, 0.35, C_GLOW));
+    // Bright glow dots
+    var glow = new THREE.Points(geo, makeDot(0.055, 0.28, C_WHITE));
     glow.position.set(x,y,z); glow.rotation.set(rx,ry,rz);
     group.add(glow);
   }
 
-  // ── HEAD ──
-  addPart(new THREE.SphereGeometry(0.24, 14, 10), 0, 2.60, 0);
+  // ── HEAD (more detailed) ──
+  addPart(new THREE.SphereGeometry(0.25, 18, 14), 0, 2.62, 0, 0,0,0, C_CYAN);
+  // Skull cross-section ring
+  var skullRing = new THREE.Mesh(
+    new THREE.TorusGeometry(0.25, 0.008, 8, 40),
+    new THREE.MeshBasicMaterial({color:0x00ffff, transparent:true, opacity:0.35, blending:THREE.AdditiveBlending, depthWrite:false})
+  );
+  skullRing.position.set(0, 2.62, 0);
+  skullRing.rotation.x = Math.PI/2;
+  group.add(skullRing);
+  // Jaw / face cross ring
+  var faceRing = new THREE.Mesh(
+    new THREE.TorusGeometry(0.18, 0.006, 8, 32),
+    new THREE.MeshBasicMaterial({color:0x0088cc, transparent:true, opacity:0.3, blending:THREE.AdditiveBlending, depthWrite:false})
+  );
+  faceRing.position.set(0, 2.50, 0.10);
+  faceRing.rotation.x = Math.PI/3;
+  group.add(faceRing);
 
   // ── NECK ──
-  addPart(new THREE.CylinderGeometry(0.09, 0.12, 0.20, 10, 3), 0, 2.26, 0);
+  addPart(new THREE.CylinderGeometry(0.09, 0.12, 0.22, 12, 3), 0, 2.27, 0, 0,0,0, C_CYAN);
 
-  // ── TORSO using LatheGeometry (smooth body silhouette) ──
+  // ── CLAVICLES ──
+  addPart(new THREE.CylinderGeometry(0.022, 0.022, 0.44, 6, 2), -0.22, 2.18, 0, 0,0, Math.PI*0.15, 0x4488ff);
+  addPart(new THREE.CylinderGeometry(0.022, 0.022, 0.44, 6, 2),  0.22, 2.18, 0, 0,0,-Math.PI*0.15, 0x4488ff);
+
+  // ── TORSO (LatheGeometry smooth silhouette) ──
   var tPts = [
-    new THREE.Vector2(0.11, 0),    // neck base
-    new THREE.Vector2(0.20, 0.06), // clavicle
-    new THREE.Vector2(0.36, 0.14), // shoulder base
-    new THREE.Vector2(0.38, 0.30), // upper chest
-    new THREE.Vector2(0.34, 0.52), // mid chest
-    new THREE.Vector2(0.30, 0.68), // lower chest
-    new THREE.Vector2(0.24, 0.82), // waist
-    new THREE.Vector2(0.28, 0.96), // abdomen
-    new THREE.Vector2(0.32, 1.10), // hip
+    new THREE.Vector2(0.11, 0.00),
+    new THREE.Vector2(0.22, 0.07),
+    new THREE.Vector2(0.38, 0.16),
+    new THREE.Vector2(0.40, 0.32),
+    new THREE.Vector2(0.36, 0.54),
+    new THREE.Vector2(0.31, 0.70),
+    new THREE.Vector2(0.24, 0.84),
+    new THREE.Vector2(0.27, 0.98),
+    new THREE.Vector2(0.33, 1.12),
   ];
-  addPart(new THREE.LatheGeometry(tPts, 14, 0, Math.PI*2), 0, 1.05, 0);
+  addPart(new THREE.LatheGeometry(tPts, 18, 0, Math.PI*2), 0, 1.04, 0, 0,0,0, C_CYAN, 0x0044aa);
+
+  // ── SPINE (behind torso) ──
+  addPart(new THREE.CylinderGeometry(0.018, 0.022, 1.30, 8, 10), 0, 1.50, -0.14, 0,0,0, 0xffaa00, false);
+
+  // ── RIBS (4 pairs, half-torus) ──
+  for (var ri=0; ri<4; ri++) {
+    var ribY = 1.90 - ri*0.20;
+    var ribR = 0.28 - ri*0.025;
+    var ribGeo = new THREE.TorusGeometry(ribR, 0.011, 6, 22, Math.PI);
+    var ribMat = new THREE.LineBasicMaterial({color:0x3399ff, transparent:true, opacity:0.40-ri*0.05, blending:THREE.AdditiveBlending, depthWrite:false});
+    var ribEdge = new THREE.LineSegments(new THREE.EdgesGeometry(ribGeo), ribMat);
+    ribEdge.position.set(0, ribY, 0);
+    group.add(ribEdge);
+    var ribBack = ribEdge.clone();
+    ribBack.rotation.y = Math.PI;
+    ribBack.position.set(0, ribY, 0);
+    group.add(ribBack);
+  }
 
   // ── PELVIS ──
-  addPart(new THREE.CylinderGeometry(0.30, 0.26, 0.22, 12, 2), 0, 1.05, 0);
+  addPart(new THREE.CylinderGeometry(0.32, 0.27, 0.22, 14, 2), 0, 1.04, 0, 0,0,0, C_PURPLE);
 
-  // ── UPPER ARMS (slightly angled away) ──
-  addPart(new THREE.CylinderGeometry(0.095, 0.085, 0.52, 10, 4), -0.62, 1.82, 0, 0,0, 0.20);
-  addPart(new THREE.CylinderGeometry(0.095, 0.085, 0.52, 10, 4),  0.62, 1.82, 0, 0,0,-0.20);
+  // ── UPPER ARMS ──
+  addPart(new THREE.CylinderGeometry(0.098, 0.088, 0.54, 12, 4), -0.63, 1.82, 0, 0,0, 0.20, C_PURPLE);
+  addPart(new THREE.CylinderGeometry(0.098, 0.088, 0.54, 12, 4),  0.63, 1.82, 0, 0,0,-0.20, C_PURPLE);
 
   // ── ELBOWS ──
-  addPart(new THREE.SphereGeometry(0.092, 9, 7), -0.74, 1.52, 0);
-  addPart(new THREE.SphereGeometry(0.092, 9, 7),  0.74, 1.52, 0);
+  addPart(new THREE.SphereGeometry(0.095, 11, 8), -0.75, 1.52, 0, 0,0,0, C_PINK);
+  addPart(new THREE.SphereGeometry(0.095, 11, 8),  0.75, 1.52, 0, 0,0,0, C_PINK);
 
   // ── FOREARMS ──
-  addPart(new THREE.CylinderGeometry(0.078, 0.065, 0.48, 10, 4), -0.80, 1.24, 0, 0,0, 0.14);
-  addPart(new THREE.CylinderGeometry(0.078, 0.065, 0.48, 10, 4),  0.80, 1.24, 0, 0,0,-0.14);
+  addPart(new THREE.CylinderGeometry(0.080, 0.068, 0.50, 12, 4), -0.82, 1.24, 0, 0,0, 0.14, C_PURPLE);
+  addPart(new THREE.CylinderGeometry(0.080, 0.068, 0.50, 12, 4),  0.82, 1.24, 0, 0,0,-0.14, C_PURPLE);
 
   // ── HANDS ──
-  addPart(new THREE.SphereGeometry(0.082, 9, 7), -0.86, 0.97, 0);
-  addPart(new THREE.SphereGeometry(0.082, 9, 7),  0.86, 0.97, 0);
+  addPart(new THREE.SphereGeometry(0.085, 10, 8), -0.88, 0.97, 0, 0,0,0, C_GOLD);
+  addPart(new THREE.SphereGeometry(0.085, 10, 8),  0.88, 0.97, 0, 0,0,0, C_GOLD);
 
   // ── UPPER LEGS ──
-  addPart(new THREE.CylinderGeometry(0.155, 0.130, 0.60, 12, 5), -0.21, 0.72, 0);
-  addPart(new THREE.CylinderGeometry(0.155, 0.130, 0.60, 12, 5),  0.21, 0.72, 0);
+  addPart(new THREE.CylinderGeometry(0.158, 0.135, 0.62, 14, 5), -0.21, 0.72, 0, 0,0,0, C_GREEN);
+  addPart(new THREE.CylinderGeometry(0.158, 0.135, 0.62, 14, 5),  0.21, 0.72, 0, 0,0,0, C_GREEN);
 
   // ── KNEES ──
-  addPart(new THREE.SphereGeometry(0.118, 10, 8), -0.21, 0.38, 0);
-  addPart(new THREE.SphereGeometry(0.118, 10, 8),  0.21, 0.38, 0);
+  addPart(new THREE.SphereGeometry(0.120, 12, 9), -0.21, 0.38, 0, 0,0,0, C_GOLD);
+  addPart(new THREE.SphereGeometry(0.120, 12, 9),  0.21, 0.38, 0, 0,0,0, C_GOLD);
 
   // ── LOWER LEGS ──
-  addPart(new THREE.CylinderGeometry(0.100, 0.078, 0.60, 12, 5), -0.21, 0.04, 0);
-  addPart(new THREE.CylinderGeometry(0.100, 0.078, 0.60, 12, 5),  0.21, 0.04, 0);
+  addPart(new THREE.CylinderGeometry(0.102, 0.080, 0.62, 12, 5), -0.21, 0.04, 0, 0,0,0, C_GREEN);
+  addPart(new THREE.CylinderGeometry(0.102, 0.080, 0.62, 12, 5),  0.21, 0.04, 0, 0,0,0, C_GREEN);
 
   // ── ANKLES ──
-  addPart(new THREE.SphereGeometry(0.076, 9, 7), -0.21,-0.32, 0);
-  addPart(new THREE.SphereGeometry(0.076, 9, 7),  0.21,-0.32, 0);
+  addPart(new THREE.SphereGeometry(0.078, 10, 8), -0.21,-0.32, 0, 0,0,0, C_PINK);
+  addPart(new THREE.SphereGeometry(0.078, 10, 8),  0.21,-0.32, 0, 0,0,0, C_PINK);
 
   // ── FEET ──
-  addPart(new THREE.BoxGeometry(0.17, 0.08, 0.30, 4, 2, 4), -0.21,-0.39, 0.06);
-  addPart(new THREE.BoxGeometry(0.17, 0.08, 0.30, 4, 2, 4),  0.21,-0.39, 0.06);
+  addPart(new THREE.BoxGeometry(0.18, 0.08, 0.32, 5, 2, 5), -0.21,-0.40, 0.07, 0,0,0, C_CYAN);
+  addPart(new THREE.BoxGeometry(0.18, 0.08, 0.32, 5, 2, 5),  0.21,-0.40, 0.07, 0,0,0, C_CYAN);
 
-  // ── GROUND GLOW ──
-  var gGeo = new THREE.CircleGeometry(0.55, 32);
-  var gMat = new THREE.MeshBasicMaterial({
-    color: 0x0044cc, transparent: true, opacity: 0.18,
-    side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false
+  // ── ORBITAL RINGS ──
+  var orb1Mat = new THREE.MeshBasicMaterial({color:0x8833ff, transparent:true, opacity:0.35, blending:THREE.AdditiveBlending, depthWrite:false});
+  var orb1 = new THREE.Mesh(new THREE.TorusGeometry(0.95, 0.007, 8, 70), orb1Mat);
+  orb1.rotation.x = Math.PI/2; orb1.position.y = 1.25;
+  scene.add(orb1);
+
+  var orb2Mat = new THREE.MeshBasicMaterial({color:0x00ccff, transparent:true, opacity:0.28, blending:THREE.AdditiveBlending, depthWrite:false});
+  var orb2 = new THREE.Mesh(new THREE.TorusGeometry(0.78, 0.005, 8, 60), orb2Mat);
+  orb2.rotation.x = Math.PI*0.32; orb2.rotation.z = Math.PI*0.18; orb2.position.y = 1.6;
+  scene.add(orb2);
+
+  var orb3Mat = new THREE.MeshBasicMaterial({color:0xff0088, transparent:true, opacity:0.20, blending:THREE.AdditiveBlending, depthWrite:false});
+  var orb3 = new THREE.Mesh(new THREE.TorusGeometry(0.60, 0.004, 8, 48), orb3Mat);
+  orb3.rotation.x = Math.PI*0.6; orb3.rotation.y = Math.PI*0.3; orb3.position.y = 2.0;
+  scene.add(orb3);
+
+  // ── SCAN BEAM ──
+  var scanMat = new THREE.MeshBasicMaterial({
+    color: 0x00ffee, transparent: true, opacity: 0.25,
+    blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide
   });
-  var groundDisc = new THREE.Mesh(gGeo, gMat);
-  groundDisc.rotation.x = -Math.PI/2;
-  groundDisc.position.y = -0.46;
-  scene.add(groundDisc);
+  var scanBeam = new THREE.Mesh(new THREE.PlaneGeometry(1.4, 0.06, 1, 1), scanMat);
+  scene.add(scanBeam);
 
-  // ── AMBIENT PARTICLES ──
-  var numP = 200;
+  // Scan line glow trail
+  var scanTrailMat = new THREE.MeshBasicMaterial({
+    color: 0x00eedd, transparent: true, opacity: 0.08,
+    blending: THREE.AdditiveBlending, depthWrite: false, side: THREE.DoubleSide
+  });
+  var scanTrail = new THREE.Mesh(new THREE.PlaneGeometry(1.2, 0.35, 1, 1), scanTrailMat);
+  scene.add(scanTrail);
+
+  // ── GRID FLOOR ──
+  var gridMat = new THREE.LineBasicMaterial({color:0x001144, transparent:true, opacity:0.6});
+  var gridGeo = new THREE.BufferGeometry();
+  var gridLines = [];
+  var gSize = 1.8, gDiv = 10;
+  for (var gi = 0; gi <= gDiv; gi++) {
+    var gp = -gSize/2 + gi*(gSize/gDiv);
+    gridLines.push(gp, 0, -gSize/2, gp, 0, gSize/2);
+    gridLines.push(-gSize/2, 0, gp, gSize/2, 0, gp);
+  }
+  gridGeo.setAttribute('position', new THREE.Float32BufferAttribute(gridLines, 3));
+  var gridMesh = new THREE.LineSegments(gridGeo, gridMat);
+  gridMesh.position.y = -0.48;
+  scene.add(gridMesh);
+
+  // ── GROUND GLOW (multi-ring) ──
+  var groundDiscs = [];
+  [0.55, 0.80, 1.10].forEach(function(r, ri) {
+    var gGeo = new THREE.RingGeometry(r-0.04, r, 48);
+    var gMat = new THREE.MeshBasicMaterial({
+      color: ri===0 ? 0x00aaff : ri===1 ? 0x8833ff : 0xff0066,
+      transparent: true, opacity: 0.22 - ri*0.06,
+      side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false
+    });
+    var gDisc = new THREE.Mesh(gGeo, gMat);
+    gDisc.rotation.x = -Math.PI/2; gDisc.position.y = -0.47;
+    scene.add(gDisc);
+    groundDiscs.push(gDisc);
+  });
+
+  // ── MULTI-COLOR AMBIENT PARTICLES ──
+  var numP = 320;
   var pPos = new Float32Array(numP*3);
   var pData = [];
-  for (var pi=0; pi<numP; pi++) {
-    pData.push({
-      angle: Math.random()*Math.PI*2,
-      radius: 0.6 + Math.random()*1.1,
-      height: -0.4 + Math.random()*3.2,
-      ySpeed: (Math.random()-0.5)*0.008,
-      aSpeed: (Math.random()-0.5)*0.012
+  var pColors = [0x00eeff, 0x9900ff, 0xff0077, 0xffaa00, 0x00ffaa];
+  var pSystems = [];
+  for (var pc=0; pc<pColors.length; pc++) {
+    var pGeoC = new THREE.BufferGeometry();
+    var pPosC = new Float32Array(64*3);
+    var pDataC = [];
+    for (var pi=0; pi<64; pi++) {
+      pDataC.push({
+        angle: Math.random()*Math.PI*2,
+        radius: 0.55 + Math.random()*1.4,
+        height: -0.5 + Math.random()*3.5,
+        ySpeed: (Math.random()-0.5)*0.007 + (pc%2===0 ? 0.004 : -0.004),
+        aSpeed: (Math.random()-0.5)*0.010 + 0.003
+      });
+    }
+    pGeoC.setAttribute('position', new THREE.BufferAttribute(pPosC, 3));
+    var pMatC = new THREE.PointsMaterial({
+      color: pColors[pc], size: 0.014+pc*0.003, transparent: true, opacity: 0.5,
+      blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true
     });
+    scene.add(new THREE.Points(pGeoC, pMatC));
+    pSystems.push({geo:pGeoC, pos:pPosC, data:pDataC, mat:pMatC});
   }
-  var pGeo2 = new THREE.BufferGeometry();
-  pGeo2.setAttribute('position', new THREE.BufferAttribute(pPos, 3));
-  var pMatAmb = new THREE.PointsMaterial({
-    color: 0x0066ff, size: 0.018, transparent: true, opacity: 0.55,
-    blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true
-  });
-  scene.add(new THREE.Points(pGeo2, pMatAmb));
+
+  // ── DNA HELIX DECORATION ──
+  var dnaGroup = new THREE.Group();
+  var dnaPoints = 60, dnaR = 0.18, dnaH = 2.4;
+  var dnaPosA = new Float32Array(dnaPoints*3);
+  var dnaPosB = new Float32Array(dnaPoints*3);
+  for (var di=0; di<dnaPoints; di++) {
+    var da = (di/dnaPoints)*Math.PI*8;
+    var dy = -0.2 + (di/dnaPoints)*dnaH;
+    dnaPosA[di*3]   = Math.cos(da)*dnaR;
+    dnaPosA[di*3+1] = dy;
+    dnaPosA[di*3+2] = Math.sin(da)*dnaR;
+    dnaPosB[di*3]   = Math.cos(da+Math.PI)*dnaR;
+    dnaPosB[di*3+1] = dy;
+    dnaPosB[di*3+2] = Math.sin(da+Math.PI)*dnaR;
+  }
+  var dnaGeoA = new THREE.BufferGeometry(); dnaGeoA.setAttribute('position', new THREE.BufferAttribute(dnaPosA,3));
+  var dnaGeoB = new THREE.BufferGeometry(); dnaGeoB.setAttribute('position', new THREE.BufferAttribute(dnaPosB,3));
+  var dnaMatA = new THREE.PointsMaterial({color:0x00ffcc, size:0.022, transparent:true, opacity:0.5, blending:THREE.AdditiveBlending, depthWrite:false, sizeAttenuation:true});
+  var dnaMatB = new THREE.PointsMaterial({color:0xff44aa, size:0.022, transparent:true, opacity:0.5, blending:THREE.AdditiveBlending, depthWrite:false, sizeAttenuation:true});
+  dnaGroup.add(new THREE.Points(dnaGeoA, dnaMatA));
+  dnaGroup.add(new THREE.Points(dnaGeoB, dnaMatB));
+  // Rungs
+  for (var dr=0; dr<dnaPoints; dr+=4) {
+    var da2 = (dr/dnaPoints)*Math.PI*8;
+    var dy2 = -0.2 + (dr/dnaPoints)*dnaH;
+    var rungGeo = new THREE.BufferGeometry();
+    var rungPts = new Float32Array([
+      Math.cos(da2)*dnaR, dy2, Math.sin(da2)*dnaR,
+      Math.cos(da2+Math.PI)*dnaR, dy2, Math.sin(da2+Math.PI)*dnaR
+    ]);
+    rungGeo.setAttribute('position', new THREE.BufferAttribute(rungPts,3));
+    var rungMat = new THREE.LineBasicMaterial({color:0x6688ff, transparent:true, opacity:0.35, blending:THREE.AdditiveBlending, depthWrite:false});
+    dnaGroup.add(new THREE.LineSegments(rungGeo, rungMat));
+  }
+  dnaGroup.position.set(1.55, 0.60, 0);
+  scene.add(dnaGroup);
 
   // ── MUSCLE HOTSPOT DOTS ──
   var hotspots = [];
@@ -2266,24 +2454,33 @@ function setLang(lang) {
     var cGeo = new THREE.BufferGeometry();
     cGeo.setAttribute('position', new THREE.Float32BufferAttribute([0,0,0],3));
     var cMat = new THREE.PointsMaterial({
-      color: col, size: 0.12, transparent: true, opacity: 1.0,
+      color: col, size: 0.13, transparent: true, opacity: 1.0,
       blending: THREE.AdditiveBlending, depthWrite: false, sizeAttenuation: true
     });
     var dot = new THREE.Points(cGeo, cMat);
     dot.position.set(m.pos[0], m.pos[1], m.pos[2]);
     dot.userData = m;
 
-    // Outer ring
-    var rGeo = new THREE.RingGeometry(0.044, 0.07, 22);
+    // Outer pulse ring
+    var rGeo = new THREE.RingGeometry(0.046, 0.075, 24);
     var rMat = new THREE.MeshBasicMaterial({
-      color: col, transparent: true, opacity: 0.6,
+      color: col, transparent: true, opacity: 0.65,
       side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false
     });
     var ring = new THREE.Mesh(rGeo, rMat);
     ring.position.set(m.pos[0], m.pos[1], m.pos[2]);
 
-    // Halo sphere
-    var hGeo = new THREE.SphereGeometry(0.058, 8, 6);
+    // Second larger ring
+    var r2Geo = new THREE.RingGeometry(0.085, 0.105, 24);
+    var r2Mat = new THREE.MeshBasicMaterial({
+      color: col, transparent: true, opacity: 0.30,
+      side: THREE.DoubleSide, blending: THREE.AdditiveBlending, depthWrite: false
+    });
+    var ring2 = new THREE.Mesh(r2Geo, r2Mat);
+    ring2.position.set(m.pos[0], m.pos[1], m.pos[2]);
+
+    // Halo sphere (wireframe)
+    var hGeo = new THREE.SphereGeometry(0.062, 8, 6);
     var hMat = new THREE.MeshBasicMaterial({
       color: col, transparent: true, opacity: 0.10,
       blending: THREE.AdditiveBlending, depthWrite: false, wireframe: true
@@ -2291,8 +2488,8 @@ function setLang(lang) {
     var halo = new THREE.Mesh(hGeo, hMat);
     halo.position.set(m.pos[0], m.pos[1], m.pos[2]);
 
-    group.add(dot); group.add(ring); group.add(halo);
-    hotspots.push({ dot:dot, ring:ring, halo:halo, data:m });
+    group.add(dot); group.add(ring); group.add(ring2); group.add(halo);
+    hotspots.push({ dot:dot, ring:ring, ring2:ring2, halo:halo, data:m });
   });
 
   // ── CLICK / TAP ──
@@ -2336,8 +2533,8 @@ function setLang(lang) {
     if (hits.length) {
       var hd = hits[0].object;
       showPanel(hd.userData);
-      hd.material.size = 0.22;
-      setTimeout(function(){ hd.material.size = 0.12; }, 300);
+      hd.material.size = 0.24;
+      setTimeout(function(){ hd.material.size = 0.13; }, 300);
     }
   }
   wrap.addEventListener('click', onTap);
@@ -2358,46 +2555,85 @@ function setLang(lang) {
     requestAnimationFrame(animate);
     t += 0.016;
     if (autoRot) group.rotation.y += 0.004;
-    group.position.y = 0.05*Math.sin(t*0.55);
+    group.position.y = 0.06*Math.sin(t*0.5);
 
-    // Pulse hotspots
+    // Pulse hotspots (double ring)
     hotspots.forEach(function(h,i) {
       var p = 0.5+0.5*Math.sin(t*2.2+i*0.75);
+      var p2 = 0.5+0.5*Math.sin(t*1.8+i*0.60+1.2);
       h.dot.material.opacity = 0.7+0.3*p;
-      h.dot.material.size    = 0.08+0.05*p;
-      h.ring.scale.set(1+0.55*p, 1+0.55*p, 1);
+      h.dot.material.size    = 0.09+0.05*p;
+      h.ring.scale.set(1+0.6*p, 1+0.6*p, 1);
       h.ring.material.opacity = 0.55*(1-p);
       h.ring.lookAt(camera.position);
-      h.halo.scale.set(1+0.7*p, 1+0.7*p, 1+0.7*p);
+      h.ring2.scale.set(1+0.8*p2, 1+0.8*p2, 1);
+      h.ring2.material.opacity = 0.3*(1-p2);
+      h.ring2.lookAt(camera.position);
+      h.halo.scale.set(1+0.8*p, 1+0.8*p, 1+0.8*p);
       h.halo.material.opacity = 0.08*(1-p);
     });
 
-    // Shimmer wireframe
-    var ci=0;
-    group.children.forEach(function(child) {
-      if (child.isLineSegments) {
-        child.material.opacity = 0.38+0.18*Math.sin(t*0.25+ci*0.18);
-        ci++;
-      }
+    // Shimmer wireframe (multi-color shift)
+    lineParts.forEach(function(child, ci) {
+      child.material.opacity = 0.40+0.20*Math.sin(t*0.22+ci*0.22);
     });
 
-    // Ambient particles
-    for (var pi2=0; pi2<numP; pi2++) {
-      var pd = pData[pi2];
-      pd.angle += pd.aSpeed;
-      pd.height += pd.ySpeed;
-      if (pd.height > 3.2) pd.height = -0.4;
-      if (pd.height < -0.4) pd.height = 3.2;
-      pPos[pi2*3]   = Math.cos(pd.angle)*pd.radius;
-      pPos[pi2*3+1] = pd.height;
-      pPos[pi2*3+2] = Math.sin(pd.angle)*pd.radius;
-    }
-    pGeo2.attributes.position.needsUpdate = true;
-    pMatAmb.opacity = 0.35+0.2*Math.sin(t*0.3);
+    // Orbital ring animation
+    orb1.rotation.z += 0.006;
+    orb2.rotation.z -= 0.008;
+    orb3.rotation.y += 0.010;
+    orb1Mat.opacity = 0.28+0.18*Math.sin(t*0.7);
+    orb2Mat.opacity = 0.20+0.14*Math.sin(t*1.0+1.0);
+    orb3Mat.opacity = 0.14+0.10*Math.sin(t*1.3+2.0);
 
-    // Ground glow pulse
-    groundDisc.material.opacity = 0.10+0.10*Math.sin(t*1.0);
-    groundDisc.scale.set(1+0.12*Math.sin(t*0.7), 1, 1+0.12*Math.sin(t*0.7));
+    // Scan beam sweep (bottom to top, loop)
+    var scanFrac = ((t * 0.28) % 1.0);
+    var scanY = -0.45 + scanFrac * 3.3;
+    scanBeam.position.set(0, scanY, 0.4);
+    scanMat.opacity = 0.18+0.12*Math.sin(t*6);
+    scanTrail.position.set(0, scanY - 0.18, 0.4);
+    scanTrailMat.opacity = 0.07*(1-scanFrac);
+
+    // Skull ring pulse
+    skullRing.rotation.y += 0.008;
+    faceRing.rotation.y += 0.012;
+
+    // Colored lights orbit
+    var la = t*0.4;
+    lightCyan.position.set(Math.cos(la)*3.0, 2.5, Math.sin(la)*2.5);
+    lightPurple.position.set(Math.cos(la+Math.PI)*2.8, 2.0, Math.sin(la+Math.PI)*2.0);
+    lightGold.position.x = Math.sin(t*0.3)*1.5;
+
+    // Multi-color particles
+    pSystems.forEach(function(ps, psi) {
+      for (var pi=0; pi<64; pi++) {
+        var pd = ps.data[pi];
+        pd.angle += pd.aSpeed;
+        pd.height += pd.ySpeed;
+        if (pd.height > 3.5) pd.height = -0.5;
+        if (pd.height < -0.5) pd.height = 3.5;
+        ps.pos[pi*3]   = Math.cos(pd.angle)*pd.radius;
+        ps.pos[pi*3+1] = pd.height;
+        ps.pos[pi*3+2] = Math.sin(pd.angle)*pd.radius;
+      }
+      ps.geo.attributes.position.needsUpdate = true;
+      ps.mat.opacity = 0.30+0.20*Math.sin(t*0.35+psi*1.1);
+    });
+
+    // DNA helix rotation
+    dnaGroup.rotation.y += 0.010;
+    dnaMatA.opacity = 0.35+0.20*Math.sin(t*1.2);
+    dnaMatB.opacity = 0.35+0.20*Math.sin(t*1.2+Math.PI);
+
+    // Ground rings pulse
+    groundDiscs.forEach(function(d, di) {
+      d.material.opacity = (0.20-di*0.05)*(0.7+0.3*Math.sin(t*0.9+di*1.2));
+      var s = 1+0.10*Math.sin(t*0.6+di*0.8);
+      d.scale.set(s,1,s);
+    });
+
+    // Grid floor color breathe
+    gridMat.opacity = 0.35+0.25*Math.sin(t*0.4);
 
     renderer.render(scene, camera);
   }
