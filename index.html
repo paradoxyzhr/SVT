@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hygiène du Système Musculaire</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -1318,8 +1319,207 @@ footer {
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js">
 </script>
+
+<style>
+.fa-solid{
+  color:#c084fc;
+  filter:drop-shadow(0 0 8px rgba(168,85,247,0.5));
+}
+</style>
+
+
+<style>
+/* Enhanced 3D Human Body */
+#three-canvas-wrap{
+  background:
+    radial-gradient(circle at 50% 30%, rgba(120,0,255,0.25), transparent 35%),
+    radial-gradient(circle at 80% 70%, rgba(0,200,255,0.18), transparent 30%),
+    linear-gradient(180deg,#020617,#000814);
+  border:1px solid rgba(168,85,247,0.35) !important;
+  box-shadow:
+    0 0 80px rgba(168,85,247,0.18),
+    inset 0 0 60px rgba(0,150,255,0.12),
+    inset 0 0 120px rgba(255,255,255,0.03);
+}
+
+#three-canvas-wrap::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(168,85,247,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168,85,247,0.06) 1px, transparent 1px);
+  background-size:40px 40px;
+  mask-image:radial-gradient(circle at center, black 20%, transparent 85%);
+  pointer-events:none;
+}
+
+#three-canvas-wrap::after{
+  content:'';
+  position:absolute;
+  width:260px;
+  height:260px;
+  background:radial-gradient(circle, rgba(168,85,247,0.22), transparent 70%);
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  animation:bodyPulse 4s ease-in-out infinite;
+  pointer-events:none;
+}
+
+@keyframes bodyPulse{
+  0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.7;}
+  50%{transform:translate(-50%,-50%) scale(1.2);opacity:1;}
+}
+
+.muscle-panel{
+  background:linear-gradient(135deg, rgba(15,23,42,0.9), rgba(30,41,59,0.75));
+  border:1px solid rgba(168,85,247,0.3);
+  box-shadow:0 0 40px rgba(168,85,247,0.12);
+}
+
+.muscle-detail-name{
+  background:linear-gradient(135deg,#c084fc,#06b6d4);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+
+.drag-hint{
+  background:rgba(0,0,0,0.35);
+  padding:8px 16px;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
+
+<style>
+svg,
+.body-svg,
+.muscle-dot,
+.body-line,
+.body-node{
+display:none !important;
+}
+
+#threejs-real-model{
+position:absolute;
+inset:0;
+z-index:5;
+}
+</style>
+
+
+<style>
+
+body{
+background:
+radial-gradient(circle at top, rgba(168,85,247,0.18), transparent 35%),
+linear-gradient(180deg,#030712,#020617,#000000) !important;
+}
+
+header, nav{
+backdrop-filter: blur(18px) !important;
+background: rgba(10,10,20,0.55) !important;
+border-bottom:1px solid rgba(168,85,247,0.25) !important;
+box-shadow:0 0 25px rgba(168,85,247,0.12);
+}
+
+button,
+.btn,
+.card,
+.panel{
+transition:0.35s ease;
+}
+
+button:hover,
+.btn:hover,
+.card:hover,
+.panel:hover{
+transform:translateY(-4px) scale(1.02);
+box-shadow:0 0 30px rgba(168,85,247,0.35);
+}
+
+#three-canvas-wrap{
+border-radius:28px !important;
+overflow:hidden !important;
+border:1px solid rgba(168,85,247,0.22);
+box-shadow:
+0 0 50px rgba(168,85,247,0.2),
+inset 0 0 60px rgba(255,255,255,0.03);
+background:
+radial-gradient(circle at center, rgba(168,85,247,0.15), transparent 45%),
+linear-gradient(180deg,#050816,#020617) !important;
+}
+
+section{
+position:relative;
+}
+
+section::before{
+content:'';
+position:absolute;
+inset:0;
+pointer-events:none;
+background:
+linear-gradient(90deg, transparent, rgba(255,255,255,0.02), transparent);
+}
+
+h1,h2,h3{
+text-shadow:0 0 18px rgba(168,85,247,0.25);
+}
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+background:linear-gradient(#8b5cf6,#22d3ee);
+border-radius:20px;
+}
+
+@media(max-width:768px){
+
+#three-canvas-wrap{
+height:500px !important;
+border-radius:22px !important;
+}
+
+.hero-title{
+font-size:2.2rem !important;
+line-height:1.1;
+}
+
+nav{
+overflow-x:auto;
+white-space:nowrap;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
+
+<div style="
+position:fixed;
+inset:0;
+pointer-events:none;
+background-image:
+radial-gradient(circle at 20% 20%, rgba(168,85,247,0.12) 0, transparent 25%),
+radial-gradient(circle at 80% 30%, rgba(34,211,238,0.12) 0, transparent 25%),
+radial-gradient(circle at 50% 80%, rgba(236,72,153,0.10) 0, transparent 30%);
+z-index:-1;
+"></div>
+
 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursor-ring"></div>
@@ -1433,17 +1633,17 @@ footer {
 
   <div class="muscles-grid">
     <div class="muscle-card fade-in">
-      <div class="muscle-card-icon icon-purple">🦴</div>
+      <div class="muscle-card-icon icon-purple"><i class="fa-solid fa-bone"></i></div>
       <h3>Muscle Squelettique</h3>
       <p>Attaché aux os via les tendons. Contrôle volontaire. Responsable de tous les mouvements conscients du corps.</p>
     </div>
     <div class="muscle-card fade-in">
-      <div class="muscle-card-icon icon-pink">❤️</div>
+      <div class="muscle-card-icon icon-pink"><i class="fa-solid fa-heart-pulse"></i></div>
       <h3>Muscle Cardiaque</h3>
       <p>Muscle du cœur. Fonctionnement automatique et involontaire. Bat en continu tout au long de la vie.</p>
     </div>
     <div class="muscle-card fade-in">
-      <div class="muscle-card-icon icon-blue">🌊</div>
+      <div class="muscle-card-icon icon-blue"><i class="fa-solid fa-water"></i></div>
       <h3>Muscle Lisse</h3>
       <p>Parois des organes creux (estomac, vaisseaux). Contrôle involontaire, régulé par le système nerveux autonome.</p>
     </div>
@@ -1454,11 +1654,11 @@ footer {
       <div class="section-label">Fonctions essentielles</div>
       <h3 style="font-family:'Orbitron',sans-serif;font-size:1.4rem;font-weight:800;margin-bottom:24px;">Rôles des muscles</h3>
       <div class="roles-list">
-        <div class="role-item"><span class="role-icon">🏃</span><span class="role-text">Mouvement et locomotion</span></div>
-        <div class="role-item"><span class="role-icon">🧍</span><span class="role-text">Maintien de la posture</span></div>
-        <div class="role-item"><span class="role-icon">🛡️</span><span class="role-text">Protection des organes</span></div>
-        <div class="role-item"><span class="role-icon">🌡️</span><span class="role-text">Thermogenèse — production de chaleur</span></div>
-        <div class="role-item"><span class="role-icon">💪</span><span class="role-text">Stabilisation des articulations</span></div>
+        <div class="role-item"><span class="role-icon"><i class="fa-solid fa-person-running"></i></span><span class="role-text">Mouvement et locomotion</span></div>
+        <div class="role-item"><span class="role-icon"><i class="fa-solid fa-person"></i></span><span class="role-text">Maintien de la posture</span></div>
+        <div class="role-item"><span class="role-icon"><i class="fa-solid fa-shield-heart"></i></span><span class="role-text">Protection des organes</span></div>
+        <div class="role-item"><span class="role-icon"><i class="fa-solid fa-temperature-half"></i></span><span class="role-text">Thermogenèse — production de chaleur</span></div>
+        <div class="role-item"><span class="role-icon"><i class="fa-solid fa-dumbbell"></i></span><span class="role-text">Stabilisation des articulations</span></div>
       </div>
     </div>
     <div class="quote-box">
@@ -1483,7 +1683,7 @@ footer {
     <div class="rule-card fade-in">
       <div class="rule-header">
         <span class="rule-num">01</span>
-        <h3 class="rule-title">🔥 Échauffement</h3>
+        <h3 class="rule-title"><i class="fa-solid fa-fire"></i> Échauffement</h3>
       </div>
       <p class="rule-desc">Progressif, ciblé et sans précipitation. Prépare les muscles à l'effort et réduit le risque de blessure.</p>
       <div class="rule-check" onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-label">Commencer doucement (5–10 min)</span></div>
@@ -1494,7 +1694,7 @@ footer {
     <div class="rule-card fade-in">
       <div class="rule-header">
         <span class="rule-num">02</span>
-        <h3 class="rule-title">💧 Hydratation</h3>
+        <h3 class="rule-title"><i class="fa-solid fa-droplet"></i> Hydratation</h3>
       </div>
       <p class="rule-desc">Avant, pendant et après l'effort. L'eau est essentielle à la contraction musculaire et à l'élimination des toxines.</p>
       <div class="rule-check" onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-label">1,5 à 2 L d'eau par jour</span></div>
@@ -1505,7 +1705,7 @@ footer {
     <div class="rule-card fade-in">
       <div class="rule-header">
         <span class="rule-num">03</span>
-        <h3 class="rule-title">🥗 Nutrition</h3>
+        <h3 class="rule-title"><i class="fa-solid fa-leaf"></i> Nutrition</h3>
       </div>
       <p class="rule-desc">Protéines, glucides et micronutriments (Mg, K, Ca) sont les piliers d'une bonne santé musculaire.</p>
       <div class="rule-check" onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-label">Protéines: 1,2–2g par kg/jour</span></div>
@@ -1516,7 +1716,7 @@ footer {
     <div class="rule-card fade-in">
       <div class="rule-header">
         <span class="rule-num">04</span>
-        <h3 class="rule-title">😴 Repos & Récupération</h3>
+        <h3 class="rule-title"><i class="fa-solid fa-bed"></i> Repos & Récupération</h3>
       </div>
       <p class="rule-desc">Le muscle se répare et se renforce pendant le repos. Sommeil et alternance des charges sont indispensables.</p>
       <div class="rule-check" onclick="toggleCheck(this)"><div class="check-box"></div><span class="check-label">7–9 heures de sommeil</span></div>
@@ -1535,37 +1735,37 @@ footer {
 
   <div class="maladies-grid">
     <div class="maladie-card fade-in" onclick="toggleMaladie(this)">
-      <div class="maladie-alert">⚡</div>
+      <div class="maladie-alert"><i class="fa-solid fa-bolt"></i></div>
       <div class="maladie-name">Crampes</div>
       <div class="maladie-action">Contraction involontaire soudaine →</div>
       <div class="maladie-tip">Causées par la déshydratation, le manque de magnésium ou un effort intense. Étirer doucement le muscle concerné et s'hydrater immédiatement.</div>
     </div>
     <div class="maladie-card fade-in" onclick="toggleMaladie(this)">
-      <div class="maladie-alert">🔴</div>
+      <div class="maladie-alert"><i class="fa-solid fa-circle-exclamation"></i></div>
       <div class="maladie-name">Contractures</div>
       <div class="maladie-action">Tension musculaire persistante →</div>
       <div class="maladie-tip">Le muscle reste en état de contraction involontaire. Repos, chaleur locale, et massage sont recommandés. Éviter les efforts brusques.</div>
     </div>
     <div class="maladie-card fade-in" onclick="toggleMaladie(this)">
-      <div class="maladie-alert">⚠️</div>
+      <div class="maladie-alert"><i class="fa-solid fa-triangle-exclamation"></i></div>
       <div class="maladie-name">Déchirures</div>
       <div class="maladie-action">Rupture partielle ou totale →</div>
       <div class="maladie-tip">Blessure grave nécessitant un arrêt immédiat. Appliquer la méthode RICE : Repos, Glace, Compression, Élévation. Consulter un médecin.</div>
     </div>
     <div class="maladie-card fade-in" onclick="toggleMaladie(this)">
-      <div class="maladie-alert">🧬</div>
+      <div class="maladie-alert"><i class="fa-solid fa-dna"></i></div>
       <div class="maladie-name">Myopathies</div>
       <div class="maladie-action">Maladies musculaires chroniques →</div>
       <div class="maladie-tip">Ensemble de maladies génétiques ou acquises affectant les fibres musculaires. Nécessitent un suivi médical spécialisé et une kinésithérapie régulière.</div>
     </div>
     <div class="maladie-card fade-in" onclick="toggleMaladie(this)">
-      <div class="maladie-alert">💧</div>
+      <div class="maladie-alert"><i class="fa-solid fa-droplet"></i></div>
       <div class="maladie-name">Déshydratation musculaire</div>
       <div class="maladie-action">Perte de performance →</div>
       <div class="maladie-tip">Même une perte de 2% d'eau réduit la performance de 20%. Fatigue précoce, crampes et risque accru de blessure. Hydratation préventive essentielle.</div>
     </div>
     <div class="maladie-card fade-in" onclick="toggleMaladie(this)">
-      <div class="maladie-alert">🛡️</div>
+      <div class="maladie-alert"><i class="fa-solid fa-shield-heart"></i></div>
       <div class="maladie-name">Tendinites</div>
       <div class="maladie-action">Inflammation du tendon →</div>
       <div class="maladie-tip">Douleur et inflammation au niveau des tendons, souvent due à la répétition excessive. Repos, anti-inflammatoires et rééducation sont nécessaires.</div>
@@ -1573,14 +1773,14 @@ footer {
   </div>
 
   <div class="prevention-wrap fade-in">
-    <div class="prevention-title">🛡️ Comment prévenir les blessures</div>
+    <div class="prevention-title"><i class="fa-solid fa-shield-heart"></i> Comment prévenir les blessures</div>
     <div class="prev-items">
-      <div class="prev-item"><span class="prev-icon">🔥</span><div class="prev-content"><h4>Échauffement systématique</h4><p>Toujours avant tout effort physique</p></div></div>
-      <div class="prev-item"><span class="prev-icon">🎯</span><div class="prev-content"><h4>Gestes adaptés</h4><p>Technique correcte pour chaque exercice</p></div></div>
-      <div class="prev-item"><span class="prev-icon">📈</span><div class="prev-content"><h4>Progression des efforts</h4><p>Augmenter graduellement l'intensité</p></div></div>
-      <div class="prev-item"><span class="prev-icon">👂</span><div class="prev-content"><h4>Écouter son corps</h4><p>Respecter les signaux d'alerte et la douleur</p></div></div>
-      <div class="prev-item"><span class="prev-icon">😴</span><div class="prev-content"><h4>Récupération complète</h4><p>Sommeil et jours de repos programmés</p></div></div>
-      <div class="prev-item"><span class="prev-icon">🥗</span><div class="prev-content"><h4>Nutrition ciblée</h4><p>Micronutriments et macronutriments équilibrés</p></div></div>
+      <div class="prev-item"><span class="prev-icon"><i class="fa-solid fa-fire"></i></span><div class="prev-content"><h4>Échauffement systématique</h4><p>Toujours avant tout effort physique</p></div></div>
+      <div class="prev-item"><span class="prev-icon"><i class="fa-solid fa-bullseye"></i></span><div class="prev-content"><h4>Gestes adaptés</h4><p>Technique correcte pour chaque exercice</p></div></div>
+      <div class="prev-item"><span class="prev-icon"><i class="fa-solid fa-chart-line"></i></span><div class="prev-content"><h4>Progression des efforts</h4><p>Augmenter graduellement l'intensité</p></div></div>
+      <div class="prev-item"><span class="prev-icon"><i class="fa-solid fa-ear-listen"></i></span><div class="prev-content"><h4>Écouter son corps</h4><p>Respecter les signaux d'alerte et la douleur</p></div></div>
+      <div class="prev-item"><span class="prev-icon"><i class="fa-solid fa-bed"></i></span><div class="prev-content"><h4>Récupération complète</h4><p>Sommeil et jours de repos programmés</p></div></div>
+      <div class="prev-item"><span class="prev-icon"><i class="fa-solid fa-leaf"></i></span><div class="prev-content"><h4>Nutrition ciblée</h4><p>Micronutriments et macronutriments équilibrés</p></div></div>
     </div>
   </div>
 </section>
@@ -1598,7 +1798,7 @@ footer {
 
   <!-- Language toggle -->
   <div class="lang-toggle-bar fade-in">
-    <div class="lang-toggle-info">🌐 Langue / اللغة — <span id="lang-current">Français</span></div>
+    <div class="lang-toggle-info"><i class="fa-solid fa-globe"></i> Langue / اللغة — <span id="lang-current">Français</span></div>
     <div class="lang-switch">
       <button id="btn-fr" class="active" onclick="setLang('fr')">Français</button>
       <button id="btn-ar" onclick="setLang('ar')">العربية</button>
@@ -1662,7 +1862,7 @@ footer {
     </div>
     <div class="muscle-panel fade-in" id="muscle-panel">
       <div class="panel-placeholder" id="panel-placeholder">
-        <div class="ph-icon">💪</div>
+        <div class="ph-icon"><i class="fa-solid fa-dumbbell"></i></div>
         <p>Cliquez sur un point lumineux<br>sur le corps pour voir<br>les détails du muscle</p>
       </div>
       <div class="muscle-detail" id="muscle-detail"></div>
@@ -1675,7 +1875,7 @@ footer {
 <section id="quiz">
   <div class="quiz-container fade-in">
     <div class="quiz-header">
-      <div class="quiz-badge">⚡ Quiz Interactif</div>
+      <div class="quiz-badge"><i class="fa-solid fa-bolt"></i> Quiz Interactif</div>
       <h2 class="quiz-title">Testez vos connaissances</h2>
       <p class="quiz-sub">5 questions sur l'hygiène du système musculaire</p>
     </div>
@@ -1855,7 +2055,7 @@ function renderQuestion() {
   document.getElementById('quiz-feedback').className = 'quiz-feedback';
   document.getElementById('quiz-feedback').textContent = '';
   document.getElementById('quiz-next').disabled = true;
-  document.getElementById('quiz-next').textContent = curr < 4 ? 'Question suivante →' : 'Voir mon score 🎯';
+  document.getElementById('quiz-next').textContent = curr < 4 ? 'Question suivante →' : 'Voir mon score <i class="fa-solid fa-bullseye"></i>';
   answered = false;
 }
 
@@ -2647,5 +2847,141 @@ function setLang(lang) {
 })();
 
 </script>
+
+<!-- Informations -->
+<div style="
+margin:40px auto;
+max-width:700px;
+padding:25px;
+border:1px solid rgba(168,85,247,0.3);
+border-radius:20px;
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(10px);
+text-align:center;
+font-family:'Orbitron',sans-serif;
+box-shadow:0 0 25px rgba(168,85,247,0.15);
+">
+
+  <h3 style="
+  color:#c084fc;
+  margin-bottom:18px;
+  font-size:1.2rem;
+  ">
+  Informations du Projet
+  </h3>
+
+  <p style="color:rgba(255,255,255,0.75);margin:8px 0;">
+    Créé par : <strong style="color:#ec4899;">Yassine Ez-Zahraoui</strong>
+  </p>
+
+  <p style="color:rgba(255,255,255,0.65);margin:8px 0;">
+    Classe : <strong>3/1</strong>
+  </p>
+
+  <p style="color:rgba(255,255,255,0.65);margin:8px 0;">
+    Professeure : <strong>Jamila Ben Jalal</strong>
+  </p>
+
+  <p style="color:rgba(255,255,255,0.5);margin-top:16px;font-size:0.85rem;">
+    Année scolaire 2024-2025
+  </p>
+
+</div>
+
+
+<script>
+window.addEventListener('load',()=>{
+
+const container = document.getElementById('threejs-real-model');
+if(!container) return;
+
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(
+45,
+container.clientWidth / container.clientHeight,
+0.1,
+1000
+);
+
+camera.position.set(0,1.5,5);
+
+const renderer = new THREE.WebGLRenderer({
+antialias:true,
+alpha:true
+});
+
+renderer.setSize(container.clientWidth, container.clientHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+
+container.appendChild(renderer.domElement);
+
+const controls = new THREE.OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+
+const ambient = new THREE.AmbientLight(0xffffff,1.2);
+scene.add(ambient);
+
+const purple = new THREE.PointLight(0xa855f7,4,100);
+purple.position.set(5,5,5);
+scene.add(purple);
+
+const blue = new THREE.PointLight(0x22d3ee,3,100);
+blue.position.set(-5,3,5);
+scene.add(blue);
+
+const ring = new THREE.Mesh(
+new THREE.TorusGeometry(2.5,0.04,16,100),
+new THREE.MeshBasicMaterial({color:0x22d3ee})
+);
+
+ring.rotation.x = Math.PI/2;
+ring.position.y = -1.8;
+scene.add(ring);
+
+const loader = new THREE.GLTFLoader();
+
+loader.load(
+'https://threejs.org/examples/models/gltf/RobotExpressive/RobotExpressive.glb',
+
+function(gltf){
+
+const model = gltf.scene;
+
+model.scale.set(1.4,1.4,1.4);
+model.position.set(0,-1.8,0);
+
+scene.add(model);
+
+function animate(){
+
+requestAnimationFrame(animate);
+
+model.rotation.y += 0.003;
+
+controls.update();
+renderer.render(scene,camera);
+
+}
+
+animate();
+
+}
+
+);
+
+window.addEventListener('resize',()=>{
+
+camera.aspect = container.clientWidth / container.clientHeight;
+camera.updateProjectionMatrix();
+
+renderer.setSize(container.clientWidth, container.clientHeight);
+
+});
+
+});
+</script>
+
 </body>
+
 </html>
